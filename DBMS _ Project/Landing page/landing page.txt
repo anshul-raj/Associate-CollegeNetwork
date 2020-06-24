@@ -1,0 +1,16 @@
+<html>
+<title>DBMS project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+<div class="nav">
+<a href="#home">Associate</a>
+<a href="#clubs&societies">Clubs and Societies</a>
+<a href="#OnlineResources">Online Resources</a>
+<a href="fms">FMS</a>
+<a href="#Profile">Profile</a>
+</div>
+
+</body>
+</html>

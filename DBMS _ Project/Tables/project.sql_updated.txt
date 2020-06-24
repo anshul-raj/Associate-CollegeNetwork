@@ -1,0 +1,199 @@
+use project;
+
+show tables;
+
+-- Insertion into Students:
+
+describe students;
+
+insert into students values
+("2018275","Advika Singh",NULL,"2018","CSD"),
+("2018277","ANEESHA LAKRA",NULL,"2018","CSD"),
+("2018278","Arnav",NULL,"2018","CSD"),
+("2018279","Arunesh",NULL,"2018","CSD"),
+("2017041","Chirag Jain",NULL,"2017","CSE");
+
+select * from students;
+
+-- Insertion into clubs_and_societies
+
+describe clubs_and_societies;
+
+insert into clubs_and_societies values
+("cc","Cultural Committee",NULL),
+("mt","MadToes",NULL),
+("fb","foobar",NULL),
+("by","byld",NULL),
+("el","elecroholics",NULL);
+
+select * from clubs_and_societies;
+
+-- Insertion into Events
+
+describe events;
+
+insert into events values
+(NULL,"cc",NULL,NULL,"cadence",NULL),
+(NULL,"by",NULL,NULL,"hackathon",NULL),
+(NULL,"fb",NULL,NULL,"pro_sort",NULL),
+(NULL,"fb",null,null,"icpc_type_pro_sort",null),
+(NULL,"el",null,null,"tinker_hack",null);
+
+insert into events values(NULL,"el",null,null,"tinker_hack",null);
+
+select * from events;
+
+-- Insertion into Subscribers
+
+describe Subscribers;
+
+insert into Subscribers values
+(NULL,"2018275","Cultural Committee"),
+(NULL,"2018275","MadToes"),
+(NULL,"2018279","Cultural Committee"),
+(NULL,"2018278","elecroholics"),
+(NULL,"2017041","byld");
+
+insert into Subscribers values (NULL,"2018275","byld");
+
+select * from Subscribers order by sub_id;
+
+-- Insertion into interests
+
+describe interests;
+
+insert into interests values
+(null,"2018275","Dance"),
+(null,"2018278","Design"),
+(null,"2018279","Sports"),
+(null,"2018279","Dance"),
+(null,"2017041","Fashion"); 
+
+insert into interests values(NULL,"2017041","Fashion&Dance");
+
+select * from Interests;
+
+-- Insertion into contents
+
+describe contents;
+
+insert into contents values
+(null,"01:01:2020","2018275","Homework",".sql","https://drive.google.com/drive/u/1/folders/1ReziY3LhkzXPg4OcAcultK3EYYlK4qSi"),
+(null,"02:01:2020","2018278","Homework",".sql","https://drive.google.com/drive/u/1/folders/1ReziY3LhkzXPg4OcAcultK3EYYlK4qSi"),
+(null,"01:01:2020","2018279","Quiz",".pdf","https://drive.google.com/drive/u/1/folders/1ReziY3LhkzXPg4OcAcultK3EYYlK4qSi"),
+(null,"01:01:2020","2018279","Worksheet",".pdf","https://drive.google.com/drive/u/1/folders/1ReziY3LhkzXPg4OcAcultK3EYYlK4qSi"),
+(null,"20:04:2020","2017041","MidSem",".pdf","https://drive.google.com/drive/u/1/folders/1ReziY3LhkzXPg4OcAcultK3EYYlK4qSi"); 
+
+insert into contents values(null,"2017041","Worksheet",".pdf","https://drive.google.com/drive/u/1/folders/1ReziY3LhkzXPg4OcAcultK3EYYlK4qSi");
+
+select * from contents;
+
+
+-- Insertion into calender
+
+describe calender;
+
+insert into calender values
+("2018275",2020-01-31 13:59:59,"Dance Competition","Random Desc-1","C-101"),
+("2018278",2020-01-12 18:59:59,"Design Showcase","Random Desc-2","C-102"),
+("2018279",2020-04-19 17:29:59,"Sports Meet","Random Desc-3","C-01"),
+("2018279",2020-03-31 23:59:59,"Dance Competition","Random Desc-4","C-101"),
+("2017041",2020-01-28 23:59:59,"Football Match","Random Desc-5","Ground"); 
+
+insert into calender values("2017041",2020-04-28 23:59:59,"TT Match","Random Desc-6","Ground");
+
+select * from calender;
+
+-- Insertion into admins
+
+describe admins;
+
+insert into admins values
+(null,"2018275","cc","Cultural Committee"),
+(null,"2018278","mt","MadToes"),
+(null,"2018279","fb","foobar"),
+(null,"2018279","by","byld"),
+(null,"2017041","el","elecroholics"); 
+
+insert into admins values(NULL,"2017041","fb","foobar");
+
+select * from admins;
+
+-- Insertion into members
+--(What is club tag?; I've assumed it same as club_name)
+
+describe members;
+
+insert into members values
+(null,"2018275","cc","Cultural Committee"),
+(null,"2018278","mt","MadToes"),
+(null,"2018279","fb","foobar"),
+(null,"2018279","by","byld"),
+(null,"2017041","el","elecroholics"); 
+
+insert into members values(NULL,"2017041","fb","foobar");
+
+select * from members;
+
+-- Insertion into contact_details
+
+describe contact_details;
+
+insert into contact_details values
+("2018275","@rohilla","@rohilla","rohilla@gmail.com"),
+("2018278","@toes","@toes","toes@gmail.com"),
+("2018279","@barkiller","@barkiller","barkillersharma@hotmail.com"),
+("2018275","@kaatil","@kaatil","kaatil@gmail.com"),
+("2018277","@raman",@raman,"raman@gmail.com");
+
+insert into contact_details values("2017041","@horlicks","horlicks","horlicks@gmail.com"); 
+
+select * from contact_details;
+
+
+-- Insertion into Service_Location
+
+describe Service_Location;
+
+insert into Service_Location values
+(null,"C-101"),
+(null,"C-102"),
+(null,"A-102"),
+(null,"C-201"),
+(null,"Canteen"); 
+
+insert into Service_Location values(NULL,"C-317");
+
+select * from Service_Location;
+
+
+-- Insertion into FMS_Complaint
+
+describe FMS_Complaint;
+
+insert into FMS_Complaint values
+(null,"Rohan Verma","rohan@gmail.com","9834729344",1,"416","AC not working"),
+(null,"Sushi Pandey","sushi@gmail.com","9823679344",2,"417","AC not working"),
+(null,"Rohit Singh","rohit@gmail.com","9834709232",3,"418","Door handle broken"),
+(null,"Vikas Patil","vikas@gmail.com","7244729344",4,"419","AC not working"),
+(null,"Rahul Chaturvedi",rahul@gmail.com,"9973384920",5,"420","Rat"); 
+
+insert into FMS_Complaint values(NULL,"Hardik Saxena","hardik@gmail.com",6,"516","AC not working");
+
+select * from FMS_Complaint;
+
+
+-- Insertion into FMS_Request
+
+describe FMS_Request;
+
+insert into FMS_Request values
+(null,"Rohan Verma","rohan@gmail.com","9834729344",1,"416","Whitewash needed"),
+(null,"Sushi Pandey","sushi@gmail.com","9823679344",2,"417","Whitewash needed"),
+(null,"Rohit Singh","rohit@gmail.com","9834709232",3,"418","Room Dirty"),
+(null,"Vikas Patil","vikas@gmail.com","7244729344",4,"419","Room Dirty"),
+(null,"Rahul Chaturvedi",rahul@gmail.com,"9973384920",5,"420","Whitewash needed"); 
+
+insert into FMS_Request values(NULL,"Hardik Saxena","hardik@gmail.com",6,"516","Room Dirty");
+
+select * from FMS_Request;

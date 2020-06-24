@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>
+<!--<div class="jumbotron text-center">
+    {% if session.logged_in == NULL%}
+        <h1>Associate Chat</h1>
+        <p class="lead">Welcome to the Associate Chat App.<br> Hope you get interested this app.</p>
+        <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% else %}
+        <h1>Hi {{ session.s_name }}</h1>
+        <p class="lead">Welcome to the Associate Chat App.<br> Hope you get interested this app.</p>
+        <a href="/chatting/{{ session.uid }}" class="btn btn-primary btn-lg">Let's Start Chat</a>
+    {% endif %}
+</div> -->
+
+<div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+	{% if session.logged_in == NULL%}
+	  <div class="text-white text-center py-5 px-4">
+	    <div>
+	      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Associate Chat</strong></h2>
+	      <p class="mx-5 mb-5">Welcome to the Associate Chat App.<br> Hope you get interested this app.
+	      </p>
+	      <a href="/login" class="btn btn-success btn-lg">Verify Its You!</a>
+	    </div>
+	  </div>
+	{% else %}
+	  <div class="text-white text-center py-5 px-4">
+	    <div>
+	      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Hi {{ session.s_name }}</strong></h2>
+	      <p class="mx-5 mb-5">Welcome to the Associate Chat App.<br> Hope you get interested this app.
+	      </p>
+	      <a href="/chatting/{{ session.uid }}" class="btn btn-primary btn-lg"> Let's Start Chat</a>
+	    </div>
+	  </div>
+	{% endif %}	
+</div>
+
+{% endblock %}
+
+
